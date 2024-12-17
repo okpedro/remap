@@ -38,10 +38,10 @@
     "web-vitals": "^1.1.0"
   },
   "scripts": {
-    "start": "vite",
+    "start": "node api.js && vite",
     "type-check": "tsc --noEmit",
     "lint": "eslint src",
-    "build": "yarn type-check && yarn lint && vite build",
+    "build": "node api.js && yarn type-check && yarn lint && vite build",
     "test": "vitest",
     "format": "prettier --write './src/**/*.{ts,tsx}'",
     "gen-types": "json2ts src/services/storage/assets/keyboard-definition-schema.json --style.singleQuote > src/gen/types/KeyboardDefinition.ts;",
